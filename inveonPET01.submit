@@ -1,0 +1,216 @@
+##############################################################
+#
+#  Standard script for Condor in ClusterGATE 
+#  Supply this script to the job splitter command line.
+#  following keywords 
+#   GC_EXEC
+#   GC_MACRO
+#  will be replaced by actual values.
+#  Do not remove any of them! 
+#
+#  The user can edit anything before the "#GJS PART"  
+#  except the line with $GC_EXEC
+#
+#  JDB 3.8.2005
+#    
+##############################################################                                                
+                                                                   
+Executable     = /usr/local/bin/Gate                                                 
+universe       = vanilla
+#Requirements   = Memory >= 512 && Arch =="INTEL"     
+#Rank	       = Memory >= 512
+#Image_Size     = 28 Meg     
+  
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET011.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET011.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET011.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET011.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET012.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET012.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET012.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET012.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET013.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET013.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET013.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET013.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET014.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET014.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET014.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET014.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET015.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET015.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET015.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET015.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET016.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET016.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET016.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET016.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET017.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET017.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET017.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET017.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET018.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET018.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET018.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET018.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET019.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET019.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET019.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET019.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0110.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0110.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0110.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0110.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0111.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0111.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0111.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0111.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0112.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0112.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0112.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0112.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0113.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0113.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0113.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0113.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0114.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0114.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0114.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0114.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0115.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0115.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0115.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0115.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0116.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0116.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0116.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0116.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0117.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0117.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0117.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0117.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0118.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0118.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0118.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0118.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0119.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0119.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0119.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0119.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0120.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0120.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0120.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0120.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0121.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0121.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0121.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0121.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0122.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0122.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0122.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0122.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0123.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0123.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0123.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0123.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0124.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0124.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0124.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0124.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0125.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0125.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0125.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0125.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0126.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0126.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0126.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0126.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0127.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0127.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0127.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0127.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0128.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0128.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0128.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0128.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0129.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0129.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0129.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0129.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0130.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0130.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0130.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0130.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0131.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0131.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0131.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0131.log
+Queue
+
+Arguments      = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0132.mac
+Output         = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0132.out
+Error          = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0132.err
+Log            = /home/rugglesresearch/Desktop/InveonSensitivity/LinearMovement/17umsec/1Particle/DOT/.Gate/inveonPET012/inveonPET0132.log
+Queue
+

@@ -1,0 +1,193 @@
+#Visualization Mac correspond to MPTwoApproachingSources
+#/vis/open OGLSX
+#/vis/viewer/reset
+#/vis/viewer/set/viewpointThetaPhi 0 269 
+#/vis/viewer/zoom 3
+#/vis/viewer/zoom 1
+#/vis/viewer/set/style surface
+#/vis/drawVolume
+#/tracking/storeTrajectory 1
+#/vis/scene/endOfEventAction accumulate
+
+/vis/disable
+
+#=====================================================
+# GEOMETRY
+#=====================================================
+/gate/geometry/setMaterialDatabase    GateMaterials.db
+
+
+#
+#     W O R L D
+#
+/gate/world/geometry/setXLength       100. cm
+/gate/world/geometry/setYLength       100. cm
+/gate/world/geometry/setZLength       100. cm
+#/gate/world/vis/setVisible true
+
+# CYLINDRICAL
+/gate/world/daughters/name                    cylindricalPET
+/gate/world/daughters/insert                  cylinder
+/gate/cylindricalPET/placement/setTranslation 0.0 0.0 0.0 cm
+/gate/cylindricalPET/geometry/setRmax         90.5 mm #16.1/2=8.05cm=80.5mm
+/gate/cylindricalPET/geometry/setRmin         80.5 mm #8.05-1cm since 10mm=1cm
+/gate/cylindricalPET/geometry/setHeight       127.2 mm
+/gate/cylindricalPET/setMaterial              Air
+#/gate/cylindricalPET/vis/forceWireframe
+#/gate/cylindricalPET/vis/setColor             white
+
+# Tungsten shield
+/gate/world/daughters/name   carter
+/gate/world/daughters/insert cylinder
+/gate/carter/setMaterial Tungsten
+/gate/carter/geometry/setRmax   120.  mm
+/gate/carter/geometry/setRmin   50.    mm
+/gate/carter/geometry/setHeight 10.   mm
+/gate/carter/placement/setTranslation 0.0 0.0 -63.6 mm
+#/gate/carter/vis/forceSolid
+#/gate/carter/vis/setColor grey
+
+# Tungsten shield
+/gate/world/daughters/name   carter2
+/gate/world/daughters/insert cylinder
+/gate/carter2/setMaterial Tungsten
+/gate/carter2/geometry/setRmax   120.  mm
+/gate/carter2/geometry/setRmin   50.    mm
+/gate/carter2/geometry/setHeight 10.   mm
+/gate/carter2/placement/setTranslation 0.0 0.0 63.6 mm
+#/gate/carter2/vis/setColor grey
+#/gate/carter2/vis/forceWireframe
+
+# HEAD
+/gate/cylindricalPET/daughters/name           head
+/gate/cylindricalPET/daughters/insert         box
+/gate/head/placement/setTranslation           85.5 0.0 0.0 mm
+/gate/head/geometry/setXLength                20 mm
+/gate/head/geometry/setYLength                31.8 mm
+/gate/head/geometry/setZLength                127.8 mm
+/gate/head/setMaterial                        Air
+#/gate/head/vis/setColor			      blue
+#/gate/head/vis/setVisible                     false
+
+# BLOCK
+/gate/head/daughters/name                     block
+/gate/head/daughters/insert                   box
+/gate/block/placement/setTranslation          0.0 0.0 0.0 mm
+/gate/block/geometry/setXLength               20 mm
+/gate/block/geometry/setYLength               32 mm  #31.8mm with 0.2 mm gap
+/gate/block/geometry/setZLength               32 mm  #31.8mm with 0.2 mm gap
+/gate/block/setMaterial                       Air
+#/gate/block/vis/setVisible                    false
+
+# Light guide used to couple the crystal blocks used 1.0 mm 
+/gate/block/daughters/name lightguide1
+/gate/block/daughters/insert box
+/gate/lightguide1/placement/setTranslation    -5 15.9 0 mm
+/gate/lightguide1/geometry/setXLength               10 mm
+/gate/lightguide1/geometry/setYLength               0.1 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide1/geometry/setZLength               32 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide1/setMaterial                       Plastic
+#/gate/lightguide1/vis/setVisible                    true
+#/gate/lightguide1/vis/setColor                      red
+#/gate/lightguide1/vis/forceWireframe
+
+/gate/block/daughters/name lightguide2
+/gate/block/daughters/insert box
+/gate/lightguide2/placement/setTranslation    -5 -15.9 0 mm
+/gate/lightguide2/geometry/setXLength               10 mm
+/gate/lightguide2/geometry/setYLength               1 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide2/geometry/setZLength               32 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide2/setMaterial                       Plastic
+#/gate/lightguide2/vis/setVisible                    true
+#/gate/lightguide2/vis/setColor                      red
+#/gate/lightguide2/vis/forceWireframe
+
+
+/gate/block/daughters/name lightguide3
+/gate/block/daughters/insert box
+/gate/lightguide3/placement/setTranslation    -5 0 15.9 mm
+/gate/lightguide3/geometry/setXLength               10 mm
+/gate/lightguide3/geometry/setYLength               32 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide3/geometry/setZLength               1 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide3/setMaterial                       Plastic
+#/gate/lightguide3/vis/setVisible                    true
+#/gate/lightguide3/vis/setColor                      red
+#/gate/lightguide3/vis/forceWireframe
+
+/gate/block/daughters/name lightguide4
+/gate/block/daughters/insert box
+/gate/lightguide4/placement/setTranslation    -5 0 -15.9 mm
+/gate/lightguide4/geometry/setXLength               10 mm
+/gate/lightguide4/geometry/setYLength               32 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide4/geometry/setZLength               1 mm  #31.8mm with 0.2 mm gap
+/gate/lightguide4/setMaterial                       Plastic
+#/gate/lightguide4/vis/setVisible                    true
+#/gate/lightguide4/vis/setColor                      red
+#/gate/lightguide4/vis/forceWireframe
+# CRYSTAL
+/gate/block/daughters/name                    crystal
+/gate/block/daughters/insert                  box
+/gate/crystal/placement/setTranslation        0.0 0.0 0.0 mm
+/gate/crystal/geometry/setXLength             10 mm
+/gate/crystal/geometry/setYLength             1.59  mm
+/gate/crystal/geometry/setZLength             1.59 mm
+/gate/crystal/setMaterial                     Air
+#/gate/crystal/vis/setVisible                  false
+#/gate/crystal/vis/forceSolid
+
+# CRYSTAL-LSO
+/gate/crystal/daughters/name                  LSO
+/gate/crystal/daughters/insert                box
+/gate/LSO/placement/setTranslation            0 0.0 0.0 mm
+/gate/LSO/geometry/setXLength                 10 mm
+/gate/LSO/geometry/setYLength                 1.59  mm
+/gate/LSO/geometry/setZLength                 1.59 mm
+/gate/LSO/setMaterial                         LSO
+#/gate/LSO/vis/setColor                        yellow
+#/gate/LSO/vis/forceWireframe
+#/gate/LSO/vis/setVisible 		      true
+# BACK COMPARTMENT
+/gate/crystal/daughters/name                  BACK
+/gate/crystal/daughters/insert                box
+/gate/BACK/placement/setTranslation            10 0.0 0.0 mm
+/gate/BACK/geometry/setXLength                 10 mm
+/gate/BACK/geometry/setYLength                 1.59 mm
+/gate/BACK/geometry/setZLength                 1.59 mm
+/gate/BACK/setMaterial                         Lead
+#/gate/BACK/vis/setColor                        blue
+#/gate/BACK/vis/forceSolid
+#/gate/BACK/vis/setVisible 		       true
+
+# Repeater for  C R Y S T A L (400 crystals per block)
+/gate/crystal/repeaters/insert                cubicArray
+/gate/crystal/cubicArray/setRepeatNumberX     1
+/gate/crystal/cubicArray/setRepeatNumberY     20
+/gate/crystal/cubicArray/setRepeatNumberZ     20
+/gate/crystal/cubicArray/setRepeatVector      0.0 1.6 1.6 mm # 0.1mm gap bewteen them
+
+
+# Repeater for BLOCK(4 blocks per head, so 400*4 =1600 crystal per head)
+/gate/block/repeaters/insert                  cubicArray
+/gate/block/cubicArray/setRepeatNumberX       1
+/gate/block/cubicArray/setRepeatNumberY       1
+/gate/block/cubicArray/setRepeatNumberZ       4
+/gate/block/cubicArray/setRepeatVector        0.0 0 32 mm # 31.8 without any gap... 0.2mm light guide in between blocks.
+
+#/gate/block/vis/setColor red
+#/gate/block/vis/forceWireframe
+
+# R E P E A T HEAD(16*1600 = 25,600 crystal element
+/gate/head/repeaters/insert                   ring
+/gate/head/ring/setRepeatNumber               16
+
+# A T T A C H    S Y S T E M 
+/gate/systems/cylindricalPET/rsector/attach   head
+/gate/systems/cylindricalPET/module/attach    block
+/gate/systems/cylindricalPET/crystal/attach   crystal
+/gate/systems/cylindricalPET/layer0/attach    LSO
+
+#	A T T A C H    C R Y S T A L  SD
+
+/gate/LSO/attachCrystalSD
+
+/gate/systems/cylindricalPET/describe

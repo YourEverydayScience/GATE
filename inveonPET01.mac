@@ -1,0 +1,43 @@
+#Execute file
+/control/execute Sources.mac
+
+#=====================================================
+#  D A T A   O U T P U T   
+#=====================================================
+
+#/gate/output/root/enable
+#/gate/output/root/setFileName            OUTPUT/moving18redo
+#/gate/output/root/setRootHitFlag          0
+#/gate/output/root/setRootSinglesFlag      1
+#/gate/output/root/setRootCoincidencesFlag 1
+
+/gate/output/ascii/enable 
+/gate/output/ascii/setFileName		OUTPUT/dat/moving18redo.txt
+/gate/output/ascii/setOutFileHitsFlag 1
+/gate/output/ascii/setOutFileSinglesFlag 0
+/gate/output/ascii/setOutFileCoincidencesFlag 1
+/gate/output/ascii/setCoincidenceMask 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0   
+#                               run evnt src srcX srcY srcZ V1-V6 tms Erg sinX sinY sinZ cptPhan cptDect rgPhan rgDetec Name1 Name2
+/gate/output/ascii/setSingleMask 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0
+
+
+#====================================================
+#  R A N D O M   E N G I N E  A N D  S E E D
+#====================================================
+# JamesRandom Ranlux64 MersenneTwister
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+/gate/random/verbose 1
+
+#=====================================================
+#   M E A S U R E M E N T   S E T T I N G S   
+#=====================================================
+
+/gate/application/setTimeSlice   1 s
+/gate/application/setTimeStart   0   s
+/gate/application/setTimeStop    1 s
+ 
+#/vis/viewer/set/viewpointThetaPhi 269 0
+/gate/geometry/rebuild
+/gate/application/startDAQ
+

@@ -1,0 +1,19 @@
+#multiple	source	try	one
+/gate/source/addSource	Na22_1	gps	
+/gate/source/Na22_1/setActivity	254511 becquerel #283420=7.66 uCi BR=0.898 254511=283420*BR	
+/gate/source/Na22_1/gps/particle	e+		
+/gate/source/Na22_1/setForcedUnstableFlag	true		
+/gate/source/Na22_1/setForcedHalfLife	82268906.02	s	
+/gate/source/Na22_1/gps/energytype	UserSpectrum		
+/gate/source/Na22_1/gps/setSpectrumFile	distribution.txt			
+/gate/source/Na22_1/gps/angtype	iso		
+/gate/source/Na22_1/gps/mintheta	0	deg	
+/gate/source/Na22_1/gps/maxtheta	180	deg	
+/gate/source/Na22_1/gps/minphi	0	deg	
+/gate/source/Na22_1/gps/maxphi	360	deg	
+/gate/source/Na22_1/gps/type	Point		
+
+
+		
+
+

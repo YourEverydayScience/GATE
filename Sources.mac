@@ -1,0 +1,34 @@
+#Two sources. 
+#Divided in multiple files in order to facilitate the visualization 
+# V I S U A L I S A T I O N
+#####
+/control/execute Geometry.mac
+
+#====================================================
+#P H A N T O M
+#====================================================
+/control/execute plasticPhantom2.mac #Execute the creation of the water cylinder and the volumes that will be moving
+
+#=====================================================
+# PHYSICS
+#=====================================================
+/control/execute physics.mac
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+/gate/run/initialize
+
+#=====================================================
+#digitizer
+#=====================================================
+/control/execute inveonDigitizer250750_simple.mac
+
+#=====================================================
+#source
+#=====================================================
+/control/execute sourcesDefinition.mac
+/control/execute sourcesPlacement.mac
+/control/execute sourceAttachto.mac
+#/control/execute visualizeSources.mac
+

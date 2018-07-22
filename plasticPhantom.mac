@@ -1,0 +1,15 @@
+#Phantom_1
+/gate/world/daughters/name plasticPhantom
+/gate/world/daughters/insert cylinder
+/gate/plasticPhantom/setMaterial Plastic
+#/gate/plasticPhantom/vis/setColor blue
+#/gate/plasticPhantom/vis/setVisible True
+/gate/plasticPhantom/geometry/setRmin 0 mm
+/gate/plasticPhantom/geometry/setRmax 31.5 mm
+/gate/plasticPhantom/geometry/setHeight 137 mm
+/gate/plasticPhantom/geometry/setPhiStart 180 deg
+/gate/plasticPhantom/geometry/setDeltaPhi 180 deg
+/gate/plasticPhantom/placement/setTranslation 0 0 -136.03 mm
+/gate/plasticPhantom/moves/insert translation
+/gate/plasticPhantom/translation/setSpeed 0 0 0.17977 cm/s
+/control/execute volumesTomove.mac

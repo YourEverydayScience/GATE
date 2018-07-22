@@ -1,0 +1,46 @@
+
+#=====================================================
+#   D I G I T I Z E R: DETECTOR ELECTRONIC RESPONSE
+#===================================================== 
+
+/gate/digitizer/Singles/insert                        adder
+/gate/digitizer/Singles/insert                        readout
+/gate/digitizer/Singles/readout/setDepth              1
+
+/gate/digitizer/Singles/insert                        blurring
+/gate/digitizer/Singles/blurring/setResolution        0.146
+/gate/digitizer/Singles/blurring/setEnergyOfReference 511. keV 
+
+/gate/digitizer/Singles/insert                        thresholder
+/gate/digitizer/Singles/thresholder/setThreshold      425. keV
+/gate/digitizer/Singles/insert                        upholder
+/gate/digitizer/Singles/upholder/setUphold            625. keV
+
+#       D E A D    T I M E 
+/gate/digitizer/Singles/insert deadtime
+/gate/digitizer/Singles/deadtime/setDeadTime 7000000. ps
+/gate/digitizer/Singles/deadtime/setMode paralysable
+/gate/digitizer/Singles/deadtime/chooseDTVolume block
+
+#=====================================================
+#	C O I N C I D E N C E    S O R T E R
+#===================================================== 
+
+/gate/digitizer/Coincidences/setWindow          3.438 ns
+/gate/digitizer/Coincidences/setOffset 0. ns
+/gate/digitizer/Coincidences/describe
+
+
+/gate/digitizer/name delay
+/gate/digitizer/insert coincidenceSorter
+/gate/digitizer/delay/setWindow 37. ns
+/gate/digitizer/delay/setOffset 535. ns
+/gate/digitizer/delay/describe
+
+/gate/digitizer/name finalCoinc
+/gate/digitizer/insert coincidenceChain
+/gate/digitizer/finalCoinc/addInputName delay
+/gate/digitizer/finalCoinc/addInputName Coincidences
+/gate/digitizer/finalCoinc/usePriority true
+/gate/digitizer/finalCoinc/describe
+

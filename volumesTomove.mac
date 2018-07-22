@@ -1,0 +1,19 @@
+/gate/plasticPhantom/daughters/name volumeTomove_1
+/gate/plasticPhantom/daughters/insert cylinder
+/gate/volumeTomove_1/setMaterial Plastic
+#/gate/volumeTomove_1/vis/forceSolid
+#/gate/volumeTomove_1/vis/setColor red
+#/gate/volumeTomove_1/vis/setVisible
+/gate/volumeTomove_1/geometry/setRmin 0 mm
+/gate/volumeTomove_1/geometry/setRmax 20 mm
+/gate/volumeTomove_1/geometry/setHeight 1000 mm
+/gate/volumeTomove_1/geometry/setPhiStart 0 deg
+/gate/volumeTomove_1/geometry/setDeltaPhi 360 deg
+/gate/volumeTomove_1/placement/setTranslation 0 0 0 mm
+/gate/volumeTomove_1/moves/insert translation
+/gate/volumeTomove_1/translation/setSpeed 0 0 0 cm/s
+
+
+/control/execute volumePlacement.mac
+/control/execute volumeVelocities.mac
+
